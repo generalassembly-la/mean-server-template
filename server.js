@@ -6,12 +6,18 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 
+// check that MongoD is running...
+require('net').connect(27017, 'localhost').on('error', function() {
+  console.log("YOU MUST BOW BEFORE THE MONGOD FIRST, MORTAL!");
+  process.exit(0);
+});
+
 // loading routes defined in the /routes folder
 var routes = require('./routes/index');
 
 // load mongoose and connect to a database
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/application-title');
+mongoose.connect('mongodb://localhost/mean-server-template');
 
 // start running express, and save the configurations for the express
 // "app" with the variable `app`.
