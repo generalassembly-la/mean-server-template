@@ -8,11 +8,11 @@ var welcomeController = require('../controllers/welcome');
 // define routes for our application, and send them to route handlers
 router.get('/', welcomeController.index);
 
-router.get(    '/resources',          resourcesController.index)
-router.get(    '/resources/new',      resourcesController.new)
-router.get(    '/resources/:id',      resourcesController.show)
+// router.get(    '/resources',          resourcesController.index)
+// router.get(    '/resources/new',      resourcesController.new)
+// router.get(    '/resources/:id',      resourcesController.show)
 // router.get(    '/resources/:id/edit', resourcesController.edit)
-router.post(   '/resources',          resourcesController.create)
+// router.post(   '/resources',          resourcesController.create)
 // router.put(    '/resources/:id',      resourcesController.update)
 // router.delete( '/resources/:id',      resourcesController.destroy)
 
