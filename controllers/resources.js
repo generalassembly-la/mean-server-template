@@ -1,7 +1,7 @@
 var Resource = require('../models/Resource');
 
 var index = function(req, res, next) {
-  Resource.find({}, function (err, resources) {
+  Resource.find({}, function(err, resources) {
     if (err) res.send(err);
 
     res.render('resources/index', {resources: resources});
@@ -22,7 +22,7 @@ var newRoute = function(req, res, next) {
 };
 
 var create = function(req, res, next) {
-  Resource.create(req.body.resource, function (err, resource) {
+  Resource.create(req.body.resource, function(err, resource) {
     if (err) res.send(err);
 
     res.redirect('/resources/' + resource.id);
